@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
+
+}
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url(https://img.freepik.com/premium-photo/ai-algorithms-disease-prediction-solid-color-background_964851-7620.jpgbackground.jpeg) no-repeat center center/cover;
+    text-align:center;
+    align-items: center;
+
+}
+.DP{
+    
+    background-color: rgb(189, 202, 132);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    margin:15px;
+    
+}
+.symptoms{
+    margin:10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+#symptoms{
+    width:300px;
+    margin:10px;
+    height:40px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+button{
+    width:75px;
+    height:30px;
+    margin:10px;
+    border-radius: 5px;
+    background-color: beige;
+    outline: none;
+    
+}
+.result{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}

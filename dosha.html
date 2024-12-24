@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dosha</title>
+    <link rel="stylesheet" href="dosha.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Find Your Ayurvedic Dosha</h1>
+        <p>Answer the questions below to discover your dosha (Vata, Pitta, Kapha).</p>
+        <form id="quizForm">
+            <div class="question">
+                <p>How would you describe your body frame?</p>
+                <label><input type="radio" name="bodyFrame" value="Vata"> Slim and thin</label><br>
+                <label><input type="radio" name="bodyFrame" value="Pitta"> Medium, muscular</label><br>
+                <label><input type="radio" name="bodyFrame" value="Kapha"> Large, sturdy</label><br>
+            </div>
+            
+            <div class="question">
+                <p>How is your digestion?</p>
+                <label><input type="radio" name="digestion" value="Vata"> Variable, sometimes irregular</label><br>
+                <label><input type="radio" name="digestion" value="Pitta"> Strong and quick</label><br>
+                <label><input type="radio" name="digestion" value="Kapha"> Slow, tends to be heavy</label><br>
+            </div>
+
+            <div class="question">
+                <p>How is your energy level?</p>
+                <label><input type="radio" name="energy" value="Vata"> Energetic but easily fatigued</label><br>
+                <label><input type="radio" name="energy" value="Pitta"> High energy, focused</label><br>
+                <label><input type="radio" name="energy" value="Kapha"> Slow to start, but steady throughout the day</label><br>
+            </div>
+
+            <div class="question">
+                <p>How do you feel about cold weather?</p>
+                <label><input type="radio" name="coldWeather" value="Vata"> I feel cold easily and dislike cold weather</label><br>
+                <label><input type="radio" name="coldWeather" value="Pitta"> I can handle it but prefer warmth</label><br>
+                <label><input type="radio" name="coldWeather" value="Kapha"> I love the cold and feel comfortable in it</label><br>
+            </div>
+
+            <div class="question">
+                <p>How would you describe your sleep pattern?</p>
+                <label><input type="radio" name="sleep" value="Vata"> I have light sleep and wake up easily</label><br>
+                <label><input type="radio" name="sleep" value="Pitta"> I sleep deeply but often have trouble falling asleep</label><br>
+                <label><input type="radio" name="sleep" value="Kapha"> I sleep soundly and for long periods</label><br>
+            </div>
+
+            <div class="question">
+                <p>How do you handle stress?</p>
+                <label><input type="radio" name="stress" value="Vata"> I get anxious and tend to worry</label><br>
+                <label><input type="radio" name="stress" value="Pitta"> I get irritable and angry under stress</label><br>
+                <label><input type="radio" name="stress" value="Kapha"> I tend to be calm, but can feel lethargic</label><br>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="result" class="result" style="display: none;">
+            <h2>Your Dosha: <span id="doshaName"></span></h2>
+            <p id="doshaDesc"></p>
+            <h3>Lifestyle Recommendations:</h3>
+            <ul id="recommendations"></ul>
+            <h3>Daily Checklist</h3>
+            <ul id="checklist">
+                <li><input type="checkbox"> Drink warm water throughout the day</li>
+                <li><input type="checkbox"> Practice daily meditation</li>
+                <li><input type="checkbox"> Follow a balanced diet</li>
+                <li><input type="checkbox"> Get enough sleep</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="dosha.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Predictor</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <script>
+        async function predictDisease() {
+            const symptoms = document.getElementById("symptoms").value;
+            const response = await fetch("http://127.0.0.1:5000/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ symptoms })
+
+            });
+            const data = await response.json();
+            document.getElementById("result").innerText = `Disease: ${data.Disease}\nCure: ${data.Cure}`;
+        }
+    </script>
+</head>
+<body>
+    <h1 class="DP">Disease Predictor</h1>
+    <label for="symptoms" class="symptoms">Enter Symptoms:</label>
+    <input type="text" id="symptoms" placeholder="e.g., Fever, Cough">
+    <button onclick="predictDisease()">Predict</button>
+    <h2 class="result">Result:</h2>
+    <pre id="result"></pre>
+</body>
+</html>
